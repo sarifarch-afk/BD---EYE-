@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>BD Eye</title>
+<meta name="description" content="Report and track everyday problems in Dhaka: traffic, waterlogging, outages, safety and more. ঢাকার সমস্যা, সবার চোখে।">
+<meta name="theme-color" content="#006a4e">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta property="og:title" content="BD Eye">
+<meta property="og:description" content="Dhaka's problems, seen by everyone. Report, confirm and track issues in your area.">
+<meta property="og:image" content="icons/og-image.png">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anek+Bangla:wght@500;700;800&family=Hind+Siliguri:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <div class="brand">
+    <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M2 17C6.5 9 11.5 6 17 6s10.5 3 15 11c-4.5 8-9.5 11-15 11S6.5 25 2 17Z" fill="var(--accent)"/><circle cx="17" cy="17" r="6.5" fill="var(--surface)"/><circle cx="17" cy="17" r="3.6" fill="var(--red)"/></svg>
+    <div><span id="appName">BD Eye</span><small id="tagline">Dhaka's problems, seen by everyone</small></div>
+  </div>
+  <div class="spacer"></div>
+  <div id="userbox"></div>
+  <div class="lang" role="group" aria-label="Language">
+    <button id="lang-bn" type="button" aria-pressed="false">বাংলা</button>
+    <button id="lang-en" type="button" aria-pressed="true">EN</button>
+  </div>
+</div></header>
+
+<main class="wrap" id="view"></main>
+
+<nav class="tabs"><div class="wrap">
+  <button type="button" data-tab="feed" id="tab-feed"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span data-t="tabFeed"></span></button>
+  <button type="button" data-tab="report" id="tab-report" class="add"><span class="plus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span><span data-t="tabReport"></span></button>
+  <button type="button" data-tab="map" id="tab-map"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span data-t="tabMap"></span></button>
+</div></nav>
+
+<div id="sheet" class="sheet" hidden></div>
+<div id="toast" class="toast" hidden></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
